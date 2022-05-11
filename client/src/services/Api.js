@@ -1,3 +1,4 @@
+/* eslint-disable eol-last */
 import axios from 'axios'
 
 export default () => {
