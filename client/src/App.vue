@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+      <headerof-page/>
+      <router-view/>
   </div>
 </template>
 
 <script>
+import HeaderofPage from './components/Header.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderofPage
+  }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -42,7 +46,6 @@ body{
 .v-card{
   padding-bottom: 20px;
   padding-top:20px;
-  
 }
 
 .theme--light.v-card {
@@ -51,5 +54,8 @@ body{
 
 .theme--light.v-btn.v-btn--has-bg{
   background-color: #F76B8A;
+}
+.v-toolbar{
+  color:white;
 }
 </style>
