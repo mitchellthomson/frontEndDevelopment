@@ -6,6 +6,9 @@ module.exports = {
             email: Joi.string().email(),
             password: Joi.string().regex(
                 new RegExp('^[a-zA-Z0-9]{8,32}$')
+            ),
+            name: Joi.string().regex(
+                new RegExp('^[a-zA-Z0-9]{2,32}$')
             )
         })
 
@@ -24,6 +27,11 @@ module.exports = {
                     1: Only a-z A-Z 0-9 are allowed as valid characters <br>
                     2: Minimum length of 8 characters <br>
                     3: Maximum length of 32 characters`
+                })
+                break
+                case'name':
+                res.status(400).send({
+                    error:'Your name must be atleast 2 characters long and only contain A-Z'
                 })
                 break
             default:

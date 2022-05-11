@@ -3,7 +3,8 @@ module.exports = {
     db: {
         database: process.env.DB_NAME || 'songnbook',
         user: process.env.DB_USER || 'songnbook',
-        passworc: process.env.DB_PASS || 'songnbook',
+        name: process.env.DB_USERNAME || 'songnbook',
+        password: process.env.DB_PASS || 'songnbook',
         options: {
             dialect: process.env.DIALECT || 'sqlite',
             host: process.env.HOST || 'localhost',

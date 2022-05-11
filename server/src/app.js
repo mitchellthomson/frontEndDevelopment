@@ -14,5 +14,4 @@ require('./routes')(app)
 sequelize.sync()
     .then( () => {
         app.listen(process.env.PORT || 8082)
-        
     })
